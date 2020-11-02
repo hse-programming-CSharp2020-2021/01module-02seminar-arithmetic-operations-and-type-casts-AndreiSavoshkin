@@ -46,13 +46,13 @@ namespace Task_03
                         ? (C == 0
                             ? "Уравнение имеет бесконечно много корней."
                             : "Уравнение корней не имеет.")
-                        : (-1 * C / B).ToString("F2"))
+                        : (-1 * C / B).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")))
                     : (D > 0
-                        ? ((-B + Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru_RU")) +
+                        ? ((-B + Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")) +
                            Environment.NewLine + 
-                          ((-B - Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru_RU"))
+                          ((-B - Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))
                         : (D == 0
-                            ? (-B / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru_RU"))
+                            ? (-B / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))
                             : complexRootsMessage)
                   );
             return result;

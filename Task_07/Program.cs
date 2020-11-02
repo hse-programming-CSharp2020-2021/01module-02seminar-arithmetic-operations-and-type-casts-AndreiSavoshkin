@@ -36,20 +36,20 @@ namespace Task_07
         {
             CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             int integerX = (int)x;
-            return integerX.ToString() + Environment.NewLine + ((x - Math.Truncate(x)) * 10).ToString(CultureInfo.GetCultureInfo("ru_RU"));
+            return integerX.ToString() + Environment.NewLine + ((x - Math.Truncate(x)) * 10).ToString(CultureInfo.GetCultureInfo("ru-RU"));
         }
         public static string RootAndSquareNumber(double x)
         {
             CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             if (x < 0)
             {
-                return (x * x).ToString("F2", CultureInfo.GetCultureInfo("ru_RU"));
+                return (x * x).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"));
             }
             else
             {
-                return Math.Sqrt(x).ToString("F2", CultureInfo.GetCultureInfo("ru_RU")) + 
+                return Math.Sqrt(x).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")) + 
                        Environment.NewLine + 
-                       (x * x).ToString("F2", CultureInfo.GetCultureInfo("ru_RU"));
+                       (x * x).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"));
             }
         }
 
