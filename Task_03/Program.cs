@@ -38,7 +38,6 @@ namespace Task_03
 
         public static string SolveEquation(double A, double B, double C)
         {
-            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU", true);
             double D;
             string result;
             D = B * B - 4 * A * C;
@@ -49,9 +48,11 @@ namespace Task_03
                             : "Уравнение корней не имеет.")
                         : (-1 * C / B).ToString("F2"))
                     : (D > 0
-                        ? ((-B + Math.Sqrt(D)) / (2 * A)).ToString("F2") + Environment.NewLine + ((-B - Math.Sqrt(D)) / (2 * A)).ToString("F2")
+                        ? ((-B + Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru_RU")) +
+                           Environment.NewLine + 
+                          ((-B - Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru_RU"))
                         : (D == 0
-                            ? (-B / (2 * A)).ToString("F2")
+                            ? (-B / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru_RU"))
                             : complexRootsMessage)
                   );
             return result;

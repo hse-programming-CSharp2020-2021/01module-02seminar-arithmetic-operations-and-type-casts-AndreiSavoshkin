@@ -56,9 +56,9 @@ namespace Task_01
 
         public static void Main(string[] args)
         {
-            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU", true);
+            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             double x = double.Parse(Console.ReadLine());
-            Console.WriteLine(CountPolynom(x).ToString("F2"));
+            Console.WriteLine(CountPolynom(x).ToString("F2", CultureInfo.GetCultureInfo("ru_RU")));
         }
     }
 }

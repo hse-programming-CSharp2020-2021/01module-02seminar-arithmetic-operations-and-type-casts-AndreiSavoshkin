@@ -34,26 +34,28 @@ namespace Task_07
     {
         public static string IntegerAndFractionalPartsNumber(double x)
         {
-            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU", true);
+            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             int integerX = (int)x;
-            return integerX.ToString() + Environment.NewLine + ((x - Math.Truncate(x)) * 10).ToString("F2");
+            return integerX.ToString() + Environment.NewLine + ((x - Math.Truncate(x)) * 10).ToString(CultureInfo.GetCultureInfo("ru_RU"));
         }
         public static string RootAndSquareNumber(double x)
         {
-            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU", true);
+            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             if (x < 0)
             {
-                return (x * x).ToString("F2");
+                return (x * x).ToString("F2", CultureInfo.GetCultureInfo("ru_RU"));
             }
             else
             {
-                return Math.Sqrt(x).ToString("F2") + Environment.NewLine + (x * x).ToString("F2");
+                return Math.Sqrt(x).ToString("F2", CultureInfo.GetCultureInfo("ru_RU")) + 
+                       Environment.NewLine + 
+                       (x * x).ToString("F2", CultureInfo.GetCultureInfo("ru_RU"));
             }
         }
 
         public static void Main()
         {
-            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU", true);
+            CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             double numberInput = double.Parse(Console.ReadLine());
             Console.WriteLine(RootAndSquareNumber(numberInput));
             Console.WriteLine(IntegerAndFractionalPartsNumber(numberInput));
