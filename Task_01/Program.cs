@@ -34,9 +34,14 @@ namespace Task_01
     {
         static double Pow(double x, int k)
         {
-            if (k == 2)
+            if (k == 1)
             {
-                return x * x;
+                return x;
+            }
+            else if (k % 2 == 0)
+            {
+                double y = Pow(x, k / 2);
+                return y * y;
             }
             else
             {

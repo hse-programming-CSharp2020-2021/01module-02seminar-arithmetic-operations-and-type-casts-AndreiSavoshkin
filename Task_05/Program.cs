@@ -52,6 +52,7 @@ namespace Task_05
                 result = notTriangleMessage;
             }
             Console.WriteLine(result);
+            Console.ReadLine();
         }
 
         static double Sqare(double a, double b, double c)

@@ -57,5 +57,6 @@ namespace Task_07
             double numberInput = double.Parse(Console.ReadLine());
             Console.WriteLine(RootAndSquareNumber(numberInput));
             Console.WriteLine(IntegerAndFractionalPartsNumber(numberInput));
+        }
     }
 }
