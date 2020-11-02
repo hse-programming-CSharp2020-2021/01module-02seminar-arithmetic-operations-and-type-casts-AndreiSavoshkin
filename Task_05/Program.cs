@@ -43,10 +43,9 @@ namespace Task_05
                    y = double.Parse(Console.ReadLine()),
                    z = double.Parse(Console.ReadLine());
             string result;
-            double epsilon = 0.001;
-            if (((y + z - x) > epsilon && (x + z - y) > epsilon && (x + y - z) > epsilon))
+            if (((y + z - x) > 0 && (x + z - y) > 0 && (x + y - z) > 0))
             {
-                result = Sqare(x, y, z).ToString();
+                result = Sqare(x, y, z).ToString("f3");
             }
             else
             {

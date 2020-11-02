@@ -45,7 +45,7 @@ namespace Task_01
         }
         public static double CountPolynom(double x)
         {
-            double result = 12 * Pow(x, 4) + 9 * Pow(x, 3) - 3 * Pow(x , 2) + 2 * x - 4;
+            double result = 12 * Pow(x, 4) + 9 * Pow(x, 3) - 3 * Pow(x, 2) + 2 * x - 4;
             return result;
         }
 
@@ -53,7 +53,7 @@ namespace Task_01
         {
             CultureInfo.CurrentUICulture = new CultureInfo("ru-RU", true);
             double x = double.Parse(Console.ReadLine());
-            Console.WriteLine(CountPolynom(x));
+            Console.WriteLine(CountPolynom(x).ToString("F2"));
         }
     }
 }
