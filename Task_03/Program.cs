@@ -28,25 +28,41 @@
  */
 
 using System;
+using System.Globalization;
 
-namespace Task_03 {
-	class Program {
-		const string complexRootsMessage = "complex roots";
-		static void Main(string[] args) {
-			// TODO : Сменить локаль на "ru-RU". 
+namespace Task_03
+{
+    class Program
+    {
+        const string complexRootsMessage = "complex roots";
+            public static string SolveEquation(double A, double B, double C)
+            {
+                double D;
+                string result;
+                D = B * B - 4 * A * C;
+                result = A == 0
+                        ? (B == 0
+                            ? (C == 0
+                                ? "Уравнение имеет бесконечно много корней."
+                                : "Уравнение корней не имеет.")
+                            : (-1 * C / B).ToString("F2"))
+                        : (D > 0
+                            ? ((-B + Math.Sqrt(D)) / (2 * A)).ToString("F2") + Environment.NewLine + ((-B - Math.Sqrt(D)) / (2 * A)).ToString("F2")
+                            : (D == 0
+                                ? (-B / (2 * A)).ToString("F2")
+                                : complexRootsMessage)
+                      );
+                return result;
+            }
 
-			double a, b, c;
-			// TODO : Считать коэффициенты.
+            public static void Main()
+            {
+                CultureInfo.CurrentUICulture = new CultureInfo("ru-RU", true);
+                double A = double.Parse(Console.ReadLine()),
+                       B = double.Parse(Console.ReadLine()),
+                       C = double.Parse(Console.ReadLine());
 
-			double discriminant = ;
-
-			// TODO : Проверить существование вещественных корней, если их нет, 
-			// записать в результирующую строку complexRootsMessage.
-			// А если корни есть, то записать их.
-			string result = ;
-
-
-			Console.WriteLine(result);
-		}
-	}
-}
+                Console.WriteLine(SolveEquation(A, B, C));
+            }
+        }
+    }

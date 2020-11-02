@@ -27,29 +27,32 @@
 
 using System;
 
-namespace Task_07 {
-	class Program {
-		static void Main(string[] args) {
-			// TODO : Сменить локаль на "ru-RU". 
+namespace Task_07
+{
+    class Program
+    {
+        public static string IntegerAndFractionalPartsNumber(double x)
+        {
+            int integerX = (int)x;
+            return integerX.ToString() + Environment.NewLine + ((x - Math.Truncate(x)) * 10).ToString("F2");
+        }
+        public static string RootAndSquareNumber(double x)
+        {
+            if (x < 0)
+            {
+                return (x * x).ToString("F2");
+            }
+            else
+            {
+                return Math.Sqrt(x).ToString("F2") + Environment.NewLine + (x * x).ToString("F2");
+            }
+        }
 
-			double x;
-			// TODO : Считать вещественную переменную.
-
-			int integer, fraction;
-			GetIntAndFract(x, out integer, out fraction);
-
-			double sqrt, sqr;
-			GetSqrtAndSqr(x, out sqrt, out sqr);
-
-			// TODO : Вывести результаты.
-		}
-
-		static void GetIntAndFract(double x, out int integer, out int fraction) {
-			// TODO : Получить целую и дробную часть числа и положить их в соответствующие переменные.
-		}
-
-		static void GetSqrtAndSqr(double x, out double sqrt, out double sqr) {
-			// TODO : Посчитать корень и квадрат и записать их в переменные sqrt и sqr соответственно.
-		}
-	}
+        public static void Main()
+        {
+            double numberInput = double.Parse(Console.ReadLine());
+            Console.WriteLine(RootAndSquareNumber(numberInput));
+            Console.WriteLine(IntegerAndFractionalPartsNumber(numberInput));
+        }
+    }
 }

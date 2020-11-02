@@ -23,20 +23,22 @@
  */
 
 using System;
+using System.Globalization;
 
-namespace Task_06 {
-	class Program {
-		static void Main(string[] args) {
-			// TODO : Сменить локаль на "en-US" для вывода в долларах
-			double sum;
-			int percent;
-			// TODO : Считать вещественную и целочисленную переменную.
+namespace Task_06
+{
+    class Program
+    {
+        public static string CountMoneyForComputer(int percent, double budget)
+        {
+            return (budget * percent / 100).ToString("C2", CultureInfo.CreateSpecificCulture("en-US"));
+        }
 
-			// TODO : Рассчитать бюджет на игры.
-			double onComputerGames = ;
-
-			// TODO : Вывести используя спецификаторы формата валюты результат. 
-			// (https://metanit.com/sharp/tutorial/7.5.php)
-		}
-	}
+        public static void Main(string[] args)
+        {
+            double budget = double.Parse(Console.ReadLine());
+            int percent = int.Parse(Console.ReadLine());
+            Console.WriteLine(CountMoneyForComputer(percent, budget));
+        }
+    }
 }

@@ -20,23 +20,19 @@
 
 using System;
 
-namespace Task_4 {
-	class Program {
-		static void Main(string[] args) {
-			int x;
-			// TODO : Считать целочисленное значение.
+namespace Task_4
+{
+    class Program
+    {
+        public static string ReverseNumber(int x)
+        {
+            return ($"{x % 10}{x % 100 / 10}{x / 100 % 10}{x / 1000}");
+        }
 
-			// TODO : Вычислить значение и вывести.
-			Console.WriteLine(ReverseNumber(x));
-		}
-
-		static int ReverseNumber(int x) {
-			// Предлагается 2 решения данной задачи : 
-			// 1) Выделить каждую цифру в отдельную переменную и собрать их в обратном порядке.
-			// 2) Преобразовать переменную в строку использовать метод Reverse и выполнить обратное преобразование.
-			// Выбор метода остаётся за вами.
-
-			return ;
-		}
-	}
+        public static void Main()
+        {
+            int x = int.Parse(Console.ReadLine());
+            Console.WriteLine(ReverseNumber(x));
+        }
+    }
 }

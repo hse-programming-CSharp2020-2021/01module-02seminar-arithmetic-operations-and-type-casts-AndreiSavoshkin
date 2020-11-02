@@ -1,0 +1,7 @@
+D:\Программки на вижуал\Hometask_2\Task_02\bin\Debug\Task_02.exe.config
+D:\Программки на вижуал\Hometask_2\Task_02\bin\Debug\Task_02.exe
+D:\Программки на вижуал\Hometask_2\Task_02\bin\Debug\Task_02.pdb
+D:\Программки на вижуал\Hometask_2\Task_02\obj\Debug\Task_02.csproj.CoreCompileInputs.cache
+D:\Программки на вижуал\Hometask_2\Task_02\obj\Debug\Task_02.exe
+D:\Программки на вижуал\Hometask_2\Task_02\obj\Debug\Task_02.pdb
+D:\Программки на вижуал\Hometask_2\Task_02\obj\Debug\Task_02.csprojAssemblyReference.cache
