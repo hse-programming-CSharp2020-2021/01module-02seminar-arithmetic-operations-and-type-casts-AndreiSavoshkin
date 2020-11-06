@@ -36,7 +36,7 @@ namespace Task_05
     {
         const string notTriangleMessage = "not a triangle";
 
-        static void Main(string[] args)
+        static void Main()
         {
             CultureInfo.CurrentUICulture = new CultureInfo("ru-RU", true);
             double x = double.Parse(Console.ReadLine()),
@@ -57,7 +57,7 @@ namespace Task_05
 
         static double Sqare(double a, double b, double c)
         {
-            double p = 1 / 2 * (a + b + c);
+            double p = 0.5 * (a + b + c);
             return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
         }
     }

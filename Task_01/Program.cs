@@ -54,7 +54,7 @@ namespace Task_01
             return result;
         }
 
-        public static void Main(string[] args)
+        public static void Main()
         {
             CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             double x = double.Parse(Console.ReadLine());
