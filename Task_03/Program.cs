@@ -47,11 +47,11 @@ namespace Task_03
                             ? "Уравнение имеет бесконечно много корней."
                             : "Уравнение корней не имеет.")
                         : (-1 * C / B).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")))
-                    : (D > 0
+                    : (D > double.Epsilon
                         ? ((-1 * B + Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")) +
                            Environment.NewLine +
                           ((-1 * B - Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))
-                        : (D == 0
+                        : (Math.Abs(D) < double.Epsilon
                             ? (-1 * B / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))
                             : complexRootsMessage)
                   );

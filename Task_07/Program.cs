@@ -27,6 +27,7 @@
 
 using System;
 using System.Globalization;
+using System.Text;
 
 namespace Task_07
 {
@@ -37,7 +38,15 @@ namespace Task_07
             CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             int integerX = (int)x;
             string number = x.ToString();
-            return integerX.ToString() + Environment.NewLine + (number.Substring(number.IndexOf('.') + 1));
+            if (number.IndexOf(',') > 0)
+            {
+                number = number.Substring(number.IndexOf(',') + 1);
+            }
+            else
+            {
+                number = "0";
+            }
+            return integerX.ToString() + Environment.NewLine + (number);
         }
         public static string RootAndSquareNumber(double x)
         {
@@ -58,8 +67,8 @@ namespace Task_07
         {
             CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             double numberInput = double.Parse(Console.ReadLine());
-            Console.WriteLine(RootAndSquareNumber(numberInput));
-            Console.WriteLine(IntegerAndFractionalPartsNumber(numberInput));
+            Console.WriteLine(RootAndSquareNumber(numberInput), Encoding.UTF8, CultureInfo.GetCultureInfo("ru-RU"));
+            Console.WriteLine(IntegerAndFractionalPartsNumber(numberInput), Encoding.UTF8, CultureInfo.GetCultureInfo("ru-RU"));
         }
     }
 }

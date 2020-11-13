@@ -29,6 +29,7 @@
 
 using System;
 using System.Globalization;
+using System.Text;
 
 namespace Task_05
 {
@@ -52,8 +53,7 @@ namespace Task_05
             {
                 result = notTriangleMessage;
             }
-            Console.WriteLine(result);
-            Console.ReadLine();
+            Console.WriteLine(result, Encoding.UTF8, CultureInfo.GetCultureInfo("ru-RU"));
         }
 
         static double Square(double a, double b, double c)
