@@ -48,11 +48,11 @@ namespace Task_03
                             : "Уравнение корней не имеет.")
                         : (-1 * C / B).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")))
                     : (D > 0
-                        ? ((-B + Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")) +
-                           Environment.NewLine + 
-                          ((-B - Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))
+                        ? ((-1 * B + Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")) +
+                           Environment.NewLine +
+                          ((-1 * B - Math.Sqrt(D)) / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))
                         : (D == 0
-                            ? (-B / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))
+                            ? (-1 * B / (2 * A)).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"))
                             : complexRootsMessage)
                   );
             return result;
@@ -62,8 +62,8 @@ namespace Task_03
         {
             CultureInfo.CurrentUICulture = new CultureInfo("ru-RU", true);
             double A = double.Parse(Console.ReadLine()),
-                       B = double.Parse(Console.ReadLine()),
-                       C = double.Parse(Console.ReadLine());
+                   B = double.Parse(Console.ReadLine()),
+                   C = double.Parse(Console.ReadLine());
 
             Console.WriteLine(SolveEquation(A, B, C));
         }

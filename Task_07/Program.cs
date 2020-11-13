@@ -36,7 +36,8 @@ namespace Task_07
         {
             CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             int integerX = (int)x;
-            return integerX.ToString() + Environment.NewLine + ((x - Math.Truncate(x)) * 10).ToString(CultureInfo.GetCultureInfo("ru-RU"));
+            string number = x.ToString();
+            return integerX.ToString() + Environment.NewLine + (number.Substring(number.IndexOf('.') + 1));
         }
         public static string RootAndSquareNumber(double x)
         {

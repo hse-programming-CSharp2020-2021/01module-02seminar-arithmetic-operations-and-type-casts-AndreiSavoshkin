@@ -42,10 +42,11 @@ namespace Task_05
             double x = double.Parse(Console.ReadLine()),
                    y = double.Parse(Console.ReadLine()),
                    z = double.Parse(Console.ReadLine());
+            double eps = 0.0001;
             string result;
-            if (((y + z - x) > 0 && (x + z - y) > 0 && (x + y - z) > 0))
+            if ((y + z - x) > eps && (x + z - y) > eps && (x + y - z) > eps)
             {
-                result = Sqare(x, y, z).ToString("f3");
+                result = Square(x, y, z).ToString("f3");
             }
             else
             {
@@ -55,7 +56,7 @@ namespace Task_05
             Console.ReadLine();
         }
 
-        static double Sqare(double a, double b, double c)
+        static double Square(double a, double b, double c)
         {
             double p = 0.5 * (a + b + c);
             return Math.Sqrt(p * (p - a) * (p - b) * (p - c));

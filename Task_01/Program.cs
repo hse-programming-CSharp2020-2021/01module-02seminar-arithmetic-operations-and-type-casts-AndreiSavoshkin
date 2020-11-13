@@ -34,9 +34,9 @@ namespace Task_01
     {
         static double Pow(double x, int k)
         {
-            if (k == 1)
+            if (k == 0)
             {
-                return x;
+                return 1;
             }
             else if (k % 2 == 0)
             {
