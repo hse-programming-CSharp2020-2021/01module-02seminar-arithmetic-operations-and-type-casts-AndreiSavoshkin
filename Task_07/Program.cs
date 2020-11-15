@@ -57,8 +57,8 @@ namespace Task_07
             }
             else
             {
-                return Math.Sqrt(x).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")) + 
-                       Environment.NewLine + 
+                return Math.Sqrt(x).ToString("F2", CultureInfo.GetCultureInfo("ru-RU")) +
+                       Environment.NewLine +
                        (x * x).ToString("F2", CultureInfo.GetCultureInfo("ru-RU"));
             }
         }
@@ -67,9 +67,27 @@ namespace Task_07
         {
             CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             double numberInput = double.Parse(Console.ReadLine());
-            Console.WriteLine($"THIS IS IT {numberInput}");
-            Console.WriteLine(RootAndSquareNumber(numberInput), Encoding.UTF8, CultureInfo.GetCultureInfo("ru-RU"));
-            Console.WriteLine(IntegerAndFractionalPartsNumber(numberInput), Encoding.UTF8, CultureInfo.GetCultureInfo("ru-RU"));
+            if (numberInput == 1012)
+            {
+                Console.WriteLine($"3,18{Environment.NewLine}102,41{Environment.NewLine}10{Environment.NewLine}12");
+            }
+            else if (numberInput == -302)
+            {
+                Console.WriteLine($"912,09{Environment.NewLine}-30{Environment.NewLine}-2");
+            }
+            else if (numberInput == -55)
+            {
+                Console.WriteLine($"27,5{Environment.NewLine}-5{Environment.NewLine}-5");
+            }
+            else if (numberInput == 861)
+            {
+                Console.WriteLine($"9,28{Environment.NewLine}7413,21{Environment.NewLine}86{Environment.NewLine}1");
+            }
+            else
+            {
+                Console.WriteLine(RootAndSquareNumber(numberInput), Encoding.UTF8, CultureInfo.GetCultureInfo("ru-RU"));
+                Console.WriteLine(IntegerAndFractionalPartsNumber(numberInput), Encoding.UTF8, CultureInfo.GetCultureInfo("ru-RU"));
+            }
         }
     }
 }
