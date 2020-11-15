@@ -67,6 +67,7 @@ namespace Task_07
         {
             CultureInfo.CurrentUICulture = new CultureInfo("ru-RU");
             double numberInput = double.Parse(Console.ReadLine());
+            Console.WriteLine($"THIS IS IT {numberInput}");
             Console.WriteLine(RootAndSquareNumber(numberInput), Encoding.UTF8, CultureInfo.GetCultureInfo("ru-RU"));
             Console.WriteLine(IntegerAndFractionalPartsNumber(numberInput), Encoding.UTF8, CultureInfo.GetCultureInfo("ru-RU"));
         }

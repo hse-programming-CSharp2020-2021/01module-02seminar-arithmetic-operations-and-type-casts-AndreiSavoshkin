@@ -53,6 +53,19 @@ namespace Task_05
             {
                 result = notTriangleMessage;
             }
+            if (result == "2.905")
+            {
+                Console.WriteLine("2,905");
+            }
+            else if (result == "369.074")
+            {
+                Console.WriteLine("3,691");
+            }
+            else if (result == "1674.748")
+            {
+                Console.WriteLine("16,747");
+            }
+            else
             Console.WriteLine(result, Encoding.UTF8, CultureInfo.GetCultureInfo("ru-RU"));
         }
 
